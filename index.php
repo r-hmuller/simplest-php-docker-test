@@ -10,7 +10,7 @@ $data = [
     'request_date' => date("d/m/Y H:i:s"),
 ];
 
-$logFile = isset($_ENV["USER"]) ? $_ENV["USER"] : 'log.txt';
+$logFile = isset($_ENV["LOG_FILE"]) ? $_ENV["LOG_FILE"] : 'log.txt';
 file_put_contents($logFile, json_encode($data)."\n", FILE_APPEND);
 
 echo "OK";
